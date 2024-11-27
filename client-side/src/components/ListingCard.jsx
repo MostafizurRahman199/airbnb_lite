@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const ListingCard = ({ listing }) => {
     const {_id, title, description, price, location, image, country, isAvailable } = listing;
-    console.log(_id);
+    // console.log(_id);
 
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white hover:shadow-2xl transition-shadow duration-300">
+        <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-2xl transition-all duration-300 hover:scale-105">
             <img
                 className="w-full h-48 object-cover"
                 src={image?.url || "https://via.placeholder.com/300"}
@@ -28,7 +28,7 @@ const ListingCard = ({ listing }) => {
                 >
                     {isAvailable ? "Available" : "Unavailable"}
                 </span>
-                <Link to={`/listing/${_id}`} className="bg-blue-500 text-white text-sm px-4 py-1 rounded hover:bg-blue-600 transition">
+                <Link to={`/listing/${_id}`} className="bg-blue-500 text-white text-sm px-2 sm:px-4 py-2 rounded-2xl hover:bg-blue-600 transition">
                     View Details
                 </Link>
             </div>
