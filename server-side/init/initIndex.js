@@ -6,7 +6,7 @@ dotenv.config();
 
 
 
-const dbURI ="mongodb+srv://fardilshifat199:iloveammu199@cluster0.g2qfy.mongodb.net/airbnb?retryWrites=true&w=majority&appName=Cluster0";
+const dbURI ="";
 
 
 if (!dbURI) {
