@@ -28,7 +28,7 @@ const ListingCard = ({ listing }) => {
                 >
                     {isAvailable ? "Available" : "Unavailable"}
                 </span>
-                <Link to={`/listing/${_id}`} className="bg-blue-500 text-white text-sm px-2 sm:px-4 py-2 rounded-2xl hover:bg-blue-600 transition">
+                <Link to={`/listing/${_id}`} className="bg-pink-500 text-white text-sm px-2 sm:px-4 py-2 rounded-2xl hover:bg-pink-600 transition">
                     View Details
                 </Link>
             </div>

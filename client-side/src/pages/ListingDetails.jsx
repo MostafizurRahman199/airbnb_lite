@@ -67,7 +67,7 @@ const ListingDetails = () => {
         {/* Back Button */}
         <button
           onClick={() => navigate("/")}
-          className="my-4 px-4 py-2 flex items-center gap-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 w-fit"
+          className="my-4 px-4 py-2 flex items-center gap-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition duration-300 w-fit"
         >
           <FaArrowLeft /> Back to Home
         </button>
@@ -88,7 +88,7 @@ const ListingDetails = () => {
               <p className="text-lg text-gray-700 mb-6">{description}</p>
 
               <div className="text-gray-800 mb-4 flex items-center gap-2">
-                <MdLocationOn className="text-blue-500" />
+                <MdLocationOn className="text-pink-500" />
                 <p>
                   {location}, {country}
                 </p>

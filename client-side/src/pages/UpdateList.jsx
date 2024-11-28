@@ -104,13 +104,13 @@ const UpdateList = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-8 w-full font-poppins ">
       <div className="">
-        <h1 className="text-3xl font-bold text-center text-blue-500 mb-8">
+        <h1 className="text-3xl font-bold text-center text-pink-500 mb-8">
           Update This List 
         </h1>
 
         <form
           onSubmit={handleSubmit}
-          className="bg-gradient-to-r from-blue-100 to-blue-200 p-8 rounded-2xl shadow-lg space-y-6 w- md:w-8/12 mx-auto"
+          className="bg-gradient-to-r from-pink-100 to-pink-200 p-8 rounded-2xl shadow-lg space-y-6 w- md:w-8/12 mx-auto"
         >
           {/* Title Input */}
           <div>
@@ -118,7 +118,7 @@ const UpdateList = () => {
               htmlFor="title"
               className="block text-gray-800 font-semibold mb-2 flex items-center"
             >
-              <FaRegFileAlt className="mr-2 text-blue-500" /> Title
+              <FaRegFileAlt className="mr-2 text-pink-500" /> Title
             </label>
             <input
               type="text"
@@ -127,7 +127,7 @@ const UpdateList = () => {
               value={formData.title}
               onChange={handleChange}
               required
-              className="w-full p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-pink-500"
             />
           </div>
 
@@ -137,7 +137,7 @@ const UpdateList = () => {
               htmlFor="description"
               className="block text-gray-800 font-semibold mb-2 flex items-center"
             >
-              <FaRegClipboard className="mr-2 text-blue-500" /> Description
+              <FaRegClipboard className="mr-2 text-pink-500" /> Description
             </label>
             <textarea
               id="description"
@@ -146,7 +146,7 @@ const UpdateList = () => {
               value={formData.description}
               onChange={handleChange}
               required
-              className="w-full p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-pink-500"
               rows="4"
             ></textarea>
           </div>
@@ -158,7 +158,7 @@ const UpdateList = () => {
                 htmlFor="price"
                 className="block text-gray-800 font-semibold mb-2 flex items-center"
               >
-                <FaDollarSign className="mr-2 text-blue-500" /> Price
+                <FaDollarSign className="mr-2 text-pink-500" /> Price
               </label>
               <input
                 type="number"
@@ -168,7 +168,7 @@ const UpdateList = () => {
                 value={formData.price}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-pink-500"
               />
             </div>
 
@@ -178,7 +178,7 @@ const UpdateList = () => {
                 htmlFor="location"
                 className="block text-gray-800 font-semibold mb-2 flex items-center"
               >
-                <FaMapMarkerAlt className="mr-2 text-blue-500" /> Location
+                <FaMapMarkerAlt className="mr-2 text-pink-500" /> Location
               </label>
               <input
                 type="text"
@@ -188,7 +188,7 @@ const UpdateList = () => {
                 value={formData.location}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-pink-500"
               />
             </div>
 
@@ -198,7 +198,7 @@ const UpdateList = () => {
                 htmlFor="country"
                 className="block text-gray-800 font-semibold mb-2 flex items-center"
               >
-                <FaGlobe className="mr-2 text-blue-500" /> Country
+                <FaGlobe className="mr-2 text-pink-500" /> Country
               </label>
               <input
                 type="text"
@@ -208,7 +208,7 @@ const UpdateList = () => {
                 value={formData.country}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-pink-500"
               />
             </div>
 
@@ -218,7 +218,7 @@ const UpdateList = () => {
                 htmlFor="image"
                 className="block text-gray-800 font-semibold mb-2 flex items-center"
               >
-                <FaImage className="mr-2 text-blue-500" /> Image URL
+                <FaImage className="mr-2 text-pink-500" /> Image URL
               </label>
               <input
                 type="text"
@@ -228,7 +228,7 @@ const UpdateList = () => {
                 value={formData.image}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-pink-500"
               />
             </div>
           </div>
@@ -242,13 +242,13 @@ const UpdateList = () => {
               defaultValue={isAvailable}
               checked={formData.isAvailable}
               onChange={handleChange}
-              className="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-500"
+              className="w-4 h-4 text-pink-500 border-gray-300 rounded focus:ring-pink-500"
             />
             <label
               htmlFor="isAvailable"
               className="ml-2 text-gray-800 font-semibold flex items-center"
             >
-              <FaCheckCircle className="mr-2 text-blue-500" /> Available for
+              <FaCheckCircle className="mr-2 text-pink-500" /> Available for
               Rent
             </label>
           </div>
@@ -257,7 +257,7 @@ const UpdateList = () => {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="px-8 py-3 bg-blue-500 text-white rounded-2xl hover:bg-blue-600 transition duration-300"
+              className="px-8 py-3 bg-pink-500 text-white rounded-2xl hover:bg-pink-600 transition duration-300"
             >
               Update
             </button>
