@@ -11,54 +11,42 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-12 border-t border-pink-100">
+    <footer className="bg-white py-12 border-t border-gray-200">
       <div className="container mx-auto px-4">
         {/* Grid Layout */}
-        <div className="flex flex-wrap justify-between">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* About Us */}
-          <div className="w-full sm:w-1/2 lg:w-1/4 p-4">
-            <h5 className="text-xl font-bold text-pink-500 mb-4">About Us</h5>
+          <div className="space-y-4">
+            <h5 className="text-xl font-semibold text-pink-600">About Us</h5>
             <p className="text-gray-600 leading-relaxed">
               We are dedicated to providing the best solutions for your needs. Your satisfaction is our priority.
             </p>
-            <button className="mt-4 bg-pink-500 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-lg">
+            <button className="mt-4 bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
               Learn More
             </button>
           </div>
 
           {/* Quick Links */}
-          <div className="w-full sm:w-1/2 lg:w-1/4 p-4">
-            <h5 className="text-xl font-bold text-pink-500 mb-4">Quick Links</h5>
+          <div className="space-y-4">
+            <h5 className="text-xl font-semibold text-pink-600">Quick Links</h5>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-pink-500 transition-colors"
-                >
+                <a href="#" className="text-gray-600 hover:text-pink-600 transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-pink-500 transition-colors"
-                >
+                <a href="#" className="text-gray-600 hover:text-pink-600 transition-colors">
                   About Us
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-pink-500 transition-colors"
-                >
+                <a href="#" className="text-gray-600 hover:text-pink-600 transition-colors">
                   Contact
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-pink-500 transition-colors"
-                >
+                <a href="#" className="text-gray-600 hover:text-pink-600 transition-colors">
                   Blog
                 </a>
               </li>
@@ -66,80 +54,62 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="w-full sm:w-1/2 lg:w-1/4 p-4">
-  <h5 className="text-xl font-bold text-pink-500 mb-4">Services</h5>
-  <ul className="space-y-2">
-    <li>
-      <a
-        href="#"
-        className="text-gray-600 hover:text-pink-500 transition-colors"
-      >
-        Guided Tours
-      </a>
-    </li>
-    <li>
-      <a
-        href="#"
-        className="text-gray-600 hover:text-pink-500 transition-colors"
-      >
-        Hotel Booking
-      </a>
-    </li>
-    <li>
-      <a
-        href="#"
-        className="text-gray-600 hover:text-pink-500 transition-colors"
-      >
-        Travel Packages
-      </a>
-    </li>
-    <li>
-      <a
-        href="#"
-        className="text-gray-600 hover:text-pink-500 transition-colors"
-      >
-        Transportation Services
-      </a>
-    </li>
-    <li>
-      <a
-        href="#"
-        className="text-gray-600 hover:text-pink-500 transition-colors"
-      >
-        Custom Itineraries
-      </a>
-    </li>
-  </ul>
-</div>
-
+          <div className="space-y-4">
+            <h5 className="text-xl font-semibold text-pink-600">Services</h5>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-gray-600 hover:text-pink-600 transition-colors">
+                  Guided Tours
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-pink-600 transition-colors">
+                  Hotel Booking
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-pink-600 transition-colors">
+                  Travel Packages
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-pink-600 transition-colors">
+                  Transportation Services
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-pink-600 transition-colors">
+                  Custom Itineraries
+                </a>
+              </li>
+            </ul>
+          </div>
 
           {/* Contact Us */}
-          <div className="w-full sm:w-1/2 lg:w-1/4 p-4">
-            <h5 className="text-xl font-bold text-pink-500 mb-4">Contact Us</h5>
+          <div className="space-y-4">
+            <h5 className="text-xl font-semibold text-pink-600">Contact Us</h5>
             <ul className="space-y-2">
-              <li className="flex items-center space-x-2">
+              <li className="flex items-center space-x-2 text-gray-600">
                 <FaMapMarkerAlt className="text-pink-500" />
-                <span className="text-gray-600">
-                  123 Business St, New York, NY
-                </span>
+                <span>123 Business St, New York, NY</span>
               </li>
-              <li className="flex items-center space-x-2">
+              <li className="flex items-center space-x-2 text-gray-600">
                 <FaPhone className="text-pink-500" />
-                <span className="text-gray-600">+1 (123) 456-7890</span>
+                <span>+1 (123) 456-7890</span>
               </li>
-              <li className="flex items-center space-x-2">
+              <li className="flex items-center space-x-2 text-gray-600">
                 <FaEnvelope className="text-pink-500" />
-                <span className="text-gray-600">info@yourcompany.com</span>
+                <span>info@yourcompany.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Newsletter */}
-        <div className="mt-8 border-t border-pink-100 pt-6">
+        <div className="mt-8 border-t border-gray-200 pt-8">
           <div className="flex flex-wrap items-center justify-between">
             <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
-              <h5 className="text-xl font-bold text-pink-500 mb-2">
+              <h5 className="text-xl font-semibold text-pink-600 mb-2">
                 Subscribe to our Newsletter
               </h5>
               <p className="text-gray-600">
@@ -150,9 +120,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 border border-pink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
               />
-              <button className="bg-pink-500 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-lg">
+              <button className="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
                 Subscribe
               </button>
             </div>
@@ -160,34 +130,34 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="text-center mt-8 border-t border-pink-100 pt-6">
-          <div className="flex justify-center space-x-4 mb-4">
+        <div className="text-center mt-8 border-t border-gray-200 pt-8">
+          <div className="flex justify-center space-x-6 mb-4">
             <a
               href="#"
-              className="text-gray-600 hover:text-pink-500 transition-colors"
+              className="text-gray-600 hover:text-pink-600 transition-colors"
             >
-              <FaFacebook size={24} />
+              <FaFacebook size={28} />
             </a>
             <a
               href="#"
-              className="text-gray-600 hover:text-pink-500 transition-colors"
+              className="text-gray-600 hover:text-pink-600 transition-colors"
             >
-              <FaTwitter size={24} />
+              <FaTwitter size={28} />
             </a>
             <a
               href="#"
-              className="text-gray-600 hover:text-pink-500 transition-colors"
+              className="text-gray-600 hover:text-pink-600 transition-colors"
             >
-              <FaInstagram size={24} />
+              <FaInstagram size={28} />
             </a>
             <a
               href="#"
-              className="text-gray-600 hover:text-pink-500 transition-colors"
+              className="text-gray-600 hover:text-pink-600 transition-colors"
             >
-              <FaLinkedin size={24} />
+              <FaLinkedin size={28} />
             </a>
           </div>
-          <p className="text-gray-500">© 2023 YourCompany. All rights reserved.</p>
+          <p className="text-gray-500 text-sm">© 2023 YourCompany. All rights reserved.</p>
         </div>
       </div>
     </footer>

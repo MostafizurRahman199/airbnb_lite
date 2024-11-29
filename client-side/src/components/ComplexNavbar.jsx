@@ -86,11 +86,11 @@ export const ComplexNavbar = () => {
     <div className="navbar-end gap-2">
    <NavbarAvatar  getNavLinkClasses={ getNavLinkClasses}></NavbarAvatar>
 
-    <button  className='btn text-gray-500 hidden md:block'>
+    <button  className=' hover:text-white transition-all  text-md  border-2 border-pink-500 text-pink-500 px-3  py-2 rounded-2xl  hover:bg-pink-600 hidden md:block'>
       Login
     </button>
 
-    <button className='btn text-gray-500 hidden md:block'>
+    <button className=' hover:text-white transition-all  text-md border-2 border-pink-500 text-pink-500  px-3 py-2 rounded-2xl  hover:bg-pink-600  hidden md:block'>
       Register
     </button>
     </div>
@@ -98,3 +98,6 @@ export const ComplexNavbar = () => {
     </div>
   )
 }
+
+
+

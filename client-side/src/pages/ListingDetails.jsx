@@ -22,82 +22,74 @@ const ListingDetails = () => {
   const navigate = useNavigate();
 
   // Function to handle delete action
-  // Handle delete action
   const handleDelete = () => {
- 
-  
     Swal.fire({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!"
-      }).then((result) => {
-        if (result.isConfirmed) {
-
-            fetch(`http://localhost:8080/listings/${_id}`, {
-                method: "DELETE",
-              })
-                .then((res) => res.json())
-                .then((data) => {
-                  if(data === "deleted"){
-                    Swal.fire({
-                        title: "Deleted!",
-                        text: "Your file has been deleted.",
-                        icon: "success"
-                      });
-                      navigate("/"); // Navigate to home or listings page
-                  }
-                })
-                .catch((err) => console.error("Error deleting listing:", err));
-
-
-      
-        }
-      });
-};
-
-
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:8080/listings/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data === "deleted") {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your listing has been deleted.",
+                icon: "success",
+              });
+              navigate("/"); // Navigate to home or listings page
+            }
+          })
+          .catch((err) => console.error("Error deleting listing:", err));
+      }
+    });
+  };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8 font_body">
-      <div className="container mx-auto px-4">
+   <div className="bg-gradient-to-br from-purple-200 via-pink-200 to-yellow-100 py-8 font_body">
+     <div className="min-h-screen w-10/12 mx-auto ">
+      <div className="container mx-auto px-2">
         {/* Back Button */}
         <button
           onClick={() => navigate("/")}
-          className="my-4 px-4 py-2 flex items-center gap-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition duration-300 w-fit"
+          className="my-4 px-5 py-3 flex items-center gap-3 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-xl shadow-lg hover:scale-105 transition duration-300"
         >
-          <FaArrowLeft /> Back to Home
+          <FaArrowLeft className="text-lg" /> Back to Home
         </button>
-        <div className="bg-white rounded-lg shadow-md overflow-hidden md:flex md:items-start">
+
+        {/* Listing Card */}
+        <div className="bg-white rounded-2xl shadow-lg overflow-hidden md:flex md:items-center mx-auto my-6">
           {/* Image Section */}
-          <div className="md:w-1/2">
+          <div className="w-full h-full md:w-1/2 flex justify-center items-center p-2 ">
             <img
-              className="w-full h-96 object-cover"
+              className="w-full h-96 rounded-2xl object-cover transition-transform duration-500 transform "
               src={image?.url || "https://via.placeholder.com/800x600"}
               alt={image?.filename || "Listing"}
             />
           </div>
 
           {/* Details Section */}
-          <div className="md:w-1/2 p-6 flex flex-col justify-between">
+          <div className="w-full md:w-1/2 p-8 flex flex-col justify-between">
             <div>
-              <h1 className="text-2xl font-bold text-gray-800 mb-4">{title}</h1>
+              <h1 className="text-3xl font-semibold text-gray-800 mb-4">{title}</h1>
               <p className="text-lg text-gray-700 mb-6">{description}</p>
 
-              <div className="text-gray-800 mb-4 flex items-center gap-2">
-                <MdLocationOn className="text-pink-500" />
-                <p>
-                  {location}, {country}
-                </p>
+              <div className="text-gray-800 mb-4 flex items-center gap-3">
+                <MdLocationOn className="text-pink-500 text-xl" />
+                <p className="text-lg">{location}, {country}</p>
               </div>
 
-              <div className="flex items-center justify-start gap-2 mb-4">
-                <p className="text-lg font-bold text-green-600">${price}</p>
+              <div className="flex items-center justify-start gap-4 mb-6">
+                <p className="text-2xl font-bold text-green-600">${price}</p>
                 <span
-                  className={`px-3 py-1 text-sm rounded-full ${
+                  className={`px-4 py-1 text-sm font-medium rounded-full ${
                     isAvailable
                       ? "bg-green-100 text-green-800"
                       : "bg-red-100 text-red-800"
@@ -108,30 +100,31 @@ const ListingDetails = () => {
               </div>
             </div>
 
-            <div className="text-sm text-gray-500 mt-4 flex items-center gap-2">
+            <div className="text-sm text-gray-500 flex items-center gap-2 mt-4">
               <FaCalendar className="text-gray-500" />
               <p>{new Date(createdAt).toLocaleDateString()}</p>
             </div>
 
             {/* Action Buttons */}
-            <div className="flex items-center gap-4 mt-6">
-              <Link to={`/updateList/${_id}`}
-              
-                className="px-4 py-2 flex items-center gap-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition duration-300"
+            <div className="flex items-center gap-6 mt-8">
+              <Link
+                to={`/updateList/${_id}`}
+                className="px-5 py-3 flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white rounded-xl shadow-lg hover:scale-105 transition duration-300"
               >
-                <FaEdit /> Edit
+                <FaEdit className="text-lg" /> Edit
               </Link>
               <button
                 onClick={handleDelete}
-                className="px-4 py-2 flex items-center gap-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-300"
+                className="px-5 py-3 flex items-center gap-3 bg-gradient-to-r from-red-500 to-pink-600 text-white rounded-xl shadow-lg hover:scale-105 transition duration-300"
               >
-                <FaTrashAlt /> Delete
+                <FaTrashAlt className="text-lg" /> Delete
               </button>
             </div>
           </div>
         </div>
       </div>
     </div>
+   </div>
   );
 };
 

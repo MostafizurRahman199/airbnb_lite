@@ -9,7 +9,7 @@ const MainLayout = () => {
       
        <ComplexNavbar></ComplexNavbar>
      
-      <div className='bg-gray-100 w-full md:w-10/12 mx-auto py-20'>
+      <div className='bg-gray-100 w-full mx-auto '>
       <Outlet></Outlet>
       </div>
         <Footer></Footer>
